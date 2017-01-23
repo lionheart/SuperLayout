@@ -94,21 +94,21 @@ public struct LayoutContainer<U>: DimensionAnchoring {
     }
 }
 
-extension NSLayoutYAxisAnchor: AxisAnchoring {
+extension NSLayoutYAxisAnchor: AxisAnchoringWithMethods {
     public typealias AnchorType = NSLayoutAnchor<NSLayoutYAxisAnchor>
 
     public var constant: CGFloat { return 0 }
     public var anchor: AnchorType { return self }
 }
 
-extension NSLayoutXAxisAnchor: AxisAnchoring {
+extension NSLayoutXAxisAnchor: AxisAnchoringWithMethods {
     public typealias AnchorType = NSLayoutAnchor<NSLayoutXAxisAnchor>
 
     public var constant: CGFloat { return 0 }
     public var anchor: AnchorType { return self }
 }
 
-extension NSLayoutDimension: DimensionAnchoring {
+extension NSLayoutDimension: DimensionAnchoringWithMethods {
     public typealias AnchorType = NSLayoutDimension
 
     public var multiplier: CGFloat { return 1 }
