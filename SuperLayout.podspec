@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = "The simplest and cleanest way to use layout anchors in Swift."
 
   s.homepage         = "https://github.com/lionheart/SuperLayout"
-  s.license          = 'Apache 2.0'
+  s.license          = { :type => 'Apache 2.0', :file => "LICENSE" }
   s.author           = { "Dan Loewenherz" => "dan@lionheartsw.com" }
   s.source           = { :git => "https://github.com/lionheart/SuperLayout.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/lionheartsw'
