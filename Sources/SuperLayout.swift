@@ -19,21 +19,44 @@ infix operator ~~: ConstraintPrecedence
 infix operator ≥≥: ConstraintPrecedence
 infix operator ≤≤: ConstraintPrecedence
 
-public protocol Anchoring {
+public protocol AxisAnchoring {
     associatedtype AnchorType
 
-    var multiplier: CGFloat { get }
     var constant: CGFloat { get }
     var anchor: AnchorType { get }
 }
 
-public protocol AxisAnchoring: Anchoring {
+public protocol DimensionAnchoring: AxisAnchoring {
+    var multiplier: CGFloat { get }
+}
+
+// MARK: - Protocol Extension
+
+extension AxisAnchoring {
+    static func +(lhs: Self, rhs: CGFloat) -> LayoutContainer<AnchorType> {
+        return LayoutContainer(anchor: lhs, constant: rhs)
+    }
+
+    static func -(lhs: Self, rhs: CGFloat) -> LayoutContainer<AnchorType> {
+        return LayoutContainer(anchor: lhs, constant: -rhs)
+    }
+}
+
+extension DimensionAnchoring {
+    static func *(lhs: Self, rhs: CGFloat) -> LayoutContainer<AnchorType> {
+        return LayoutContainer(anchor: lhs, multiplier: rhs)
+    }
+}
+
+// MARK: - Protocol Helpers
+
+public protocol AxisAnchoringWithMethods: AxisAnchoring {
     func constraint(equalTo: AnchorType, constant: CGFloat) -> NSLayoutConstraint
     func constraint(lessThanOrEqualTo: AnchorType, constant: CGFloat) -> NSLayoutConstraint
     func constraint(greaterThanOrEqualTo: AnchorType, constant: CGFloat) -> NSLayoutConstraint
 }
 
-public protocol DimensionAnchoring: Anchoring {
+public protocol DimensionAnchoringWithMethods: DimensionAnchoring {
     func constraint(equalToConstant: CGFloat) -> NSLayoutConstraint
     func constraint(lessThanOrEqualToConstant: CGFloat) -> NSLayoutConstraint
     func constraint(greaterThanOrEqualToConstant: CGFloat) -> NSLayoutConstraint
@@ -43,14 +66,16 @@ public protocol DimensionAnchoring: Anchoring {
     func constraint(greaterThanOrEqualTo: AnchorType, multiplier: CGFloat, constant: CGFloat) -> NSLayoutConstraint
 }
 
-public struct LayoutContainer<U>: Anchoring {
+// MARK:
+
+public struct LayoutContainer<U>: DimensionAnchoring {
     public typealias AnchorType = U
 
     public var multiplier: CGFloat
     public var constant: CGFloat
     public var anchor: AnchorType
 
-    init<T: Anchoring>(anchor: T, constant: CGFloat) where T.AnchorType == AnchorType {
+    init<T: DimensionAnchoring>(anchor: T, constant: CGFloat) where T.AnchorType == AnchorType {
         self.constant = constant
         self.multiplier = anchor.multiplier
         self.anchor = anchor.anchor
@@ -62,19 +87,16 @@ public struct LayoutContainer<U>: Anchoring {
         self.anchor = anchor.anchor
     }
 
-    static func +(lhs: LayoutContainer<AnchorType>, rhs: CGFloat) -> LayoutContainer {
-        return LayoutContainer(anchor: lhs, constant: rhs)
-    }
-
-    static func -(lhs: LayoutContainer<AnchorType>, rhs: CGFloat) -> LayoutContainer {
-        return LayoutContainer(anchor: lhs, constant: -rhs)
+    init<T: AxisAnchoring>(anchor: T, constant: CGFloat) where T.AnchorType == AnchorType {
+        self.constant = constant
+        self.multiplier = 1
+        self.anchor = anchor.anchor
     }
 }
 
 extension NSLayoutYAxisAnchor: AxisAnchoring {
     public typealias AnchorType = NSLayoutAnchor<NSLayoutYAxisAnchor>
 
-    public var multiplier: CGFloat { return 1 }
     public var constant: CGFloat { return 0 }
     public var anchor: AnchorType { return self }
 }
@@ -82,7 +104,6 @@ extension NSLayoutYAxisAnchor: AxisAnchoring {
 extension NSLayoutXAxisAnchor: AxisAnchoring {
     public typealias AnchorType = NSLayoutAnchor<NSLayoutXAxisAnchor>
 
-    public var multiplier: CGFloat { return 1 }
     public var constant: CGFloat { return 0 }
     public var anchor: AnchorType { return self }
 }
@@ -95,7 +116,7 @@ extension NSLayoutDimension: DimensionAnchoring {
     public var anchor: AnchorType { return self }
 }
 
-public extension DimensionAnchoring {
+public extension DimensionAnchoringWithMethods {
     /// Returns a constraint that defines the anchor’s size attribute as equal to the specified size attribute multiplied by a constant plus an offset.
     ///
     /// - Parameters:
@@ -103,7 +124,7 @@ public extension DimensionAnchoring {
     ///   - rhs: See `lhs`.
     /// - Returns: An `NSLayoutConstraint` object that defines the attribute represented by this layout anchor as equal to the attribute represented by the anchor parameter multiplied by an optional m constant plus an optional constant c.
     @discardableResult
-    static func ~~<T: Anchoring>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.AnchorType == AnchorType {
+    static func ~~<T: DimensionAnchoring>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.AnchorType == AnchorType {
         let constraint = lhs.constraint(equalTo: rhs.anchor, multiplier: rhs.multiplier, constant: rhs.constant)
         constraint.isActive = true
         return constraint
@@ -116,7 +137,7 @@ public extension DimensionAnchoring {
     ///   - rhs: See `lhs`.
     /// - Returns: An `NSLayoutConstraint` object that defines the attribute represented by this layout anchor as less than or equal to the attribute represented by the anchor parameter multiplied by an optional m constant plus an optional constant c.
     @discardableResult
-    static func ≤≤<T: Anchoring>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.AnchorType == AnchorType {
+    static func ≤≤<T: DimensionAnchoring>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.AnchorType == AnchorType {
         let constraint = lhs.constraint(lessThanOrEqualTo: rhs.anchor, multiplier: rhs.multiplier, constant: rhs.constant)
         constraint.isActive = true
         return constraint
@@ -129,7 +150,7 @@ public extension DimensionAnchoring {
     ///   - rhs: See `lhs`.
     /// - Returns: An NSLayoutConstraint object that defines the attribute represented by this layout anchor as greater than or equal to the attribute represented by the anchor parameter multiplied by an optional m constant plus an optional constant c.
     @discardableResult
-    static func ≥≥<T: Anchoring>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.AnchorType == AnchorType {
+    static func ≥≥<T: DimensionAnchoring>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.AnchorType == AnchorType {
         let constraint = lhs.constraint(greaterThanOrEqualTo: rhs.anchor, multiplier: rhs.multiplier, constant: rhs.constant)
         constraint.isActive = true
         return constraint
@@ -155,14 +176,9 @@ public extension DimensionAnchoring {
         constraint.isActive = true
         return constraint
     }
-
-    @discardableResult
-    static func *(lhs: Self, rhs: CGFloat) -> LayoutContainer<AnchorType> {
-        return LayoutContainer(anchor: lhs, multiplier: rhs)
-    }
 }
 
-public extension AxisAnchoring {
+public extension AxisAnchoringWithMethods {
     /// Returns a constraint that defines one item’s attribute as equal to another item’s attribute plus an optional constant offset.
     ///
     /// - Parameters:
@@ -170,7 +186,7 @@ public extension AxisAnchoring {
     ///   - rhs: See `lhs`.
     /// - Returns: An `NSLayoutConstraint` object that defines an equal relationship between the attributes represented by the two layout anchors plus a constant offset.
     @discardableResult
-    static func ~~<T: Anchoring>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.AnchorType == AnchorType {
+    static func ~~<T: AxisAnchoring>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.AnchorType == AnchorType {
         let constraint = lhs.constraint(equalTo: rhs.anchor, constant: rhs.constant)
         constraint.isActive = true
         return constraint
@@ -183,7 +199,7 @@ public extension AxisAnchoring {
     ///   - rhs: See `lhs`.
     /// - Returns: An `NSLayoutConstraint` object that defines the attribute represented by this layout anchor as less than or equal to the attribute represented by the anchor parameter plus a constant offset.
     @discardableResult
-    static func ≤≤<T: Anchoring>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.AnchorType == AnchorType {
+    static func ≤≤<T: AxisAnchoring>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.AnchorType == AnchorType {
         let constraint = lhs.constraint(lessThanOrEqualTo: rhs.anchor, constant: rhs.constant)
         constraint.isActive = true
         return constraint
@@ -196,17 +212,9 @@ public extension AxisAnchoring {
     ///   - rhs: See `lhs`.
     /// - Returns: An `NSLayoutConstraint` object that defines the attribute represented by this layout anchor as greater than or equal to the attribute represented by the anchor parameter plus a constant offset.
     @discardableResult
-    static func ≥≥<T: Anchoring>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.AnchorType == AnchorType {
+    static func ≥≥<T: AxisAnchoring>(lhs: Self, rhs: T) -> NSLayoutConstraint where T.AnchorType == AnchorType {
         let constraint = lhs.constraint(greaterThanOrEqualTo: rhs.anchor, constant: rhs.constant)
         constraint.isActive = true
         return constraint
-    }
-
-    static func +(lhs: Self, rhs: CGFloat) -> LayoutContainer<AnchorType> {
-        return LayoutContainer(anchor: lhs, constant: rhs)
-    }
-
-    static func -(lhs: Self, rhs: CGFloat) -> LayoutContainer<AnchorType> {
-        return LayoutContainer(anchor: lhs, constant: -rhs)
     }
 }
