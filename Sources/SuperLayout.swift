@@ -10,6 +10,7 @@ import UIKit
 
 precedencegroup ConstraintPrecedence {
     lowerThan: AdditionPrecedence
+    higherThan: AssignmentPrecedence
     associativity: left
     assignment: false
 }
