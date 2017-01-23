@@ -32,7 +32,7 @@ public protocol DimensionAnchoring: AxisAnchoring {
 
 // MARK: - Protocol Extension
 
-extension AxisAnchoring {
+public extension AxisAnchoring {
     static func +(lhs: Self, rhs: CGFloat) -> LayoutContainer<AnchorType> {
         return LayoutContainer(anchor: lhs, constant: rhs)
     }
@@ -42,7 +42,7 @@ extension AxisAnchoring {
     }
 }
 
-extension DimensionAnchoring {
+public extension DimensionAnchoring {
     static func *(lhs: Self, rhs: CGFloat) -> LayoutContainer<AnchorType> {
         return LayoutContainer(anchor: lhs, multiplier: rhs)
     }
