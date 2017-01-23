@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SuperLayout"
-  s.version          =  "0.2.0"
+  s.version          =  "0.2.1"
   s.summary          = "The simplest and cleanest way to use layout anchors in Swift."
 
   s.homepage         = "https://github.com/lionheart/SuperLayout"
