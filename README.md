@@ -30,9 +30,7 @@ viewA.rightAnchor ~~ viewB.leftAnchor
 
 [constraint(equalTo:constant:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500937-constraint)
 
-```swift
-viewA.rightAnchor ~~ viewB.leftAnchor - 10
-```
+☞ `viewA.rightAnchor ~~ viewB.leftAnchor - 10`
 
 <details>
   <summary>See original</summary>
