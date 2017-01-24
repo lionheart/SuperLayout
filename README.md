@@ -1,9 +1,11 @@
 SuperLayout
 ===========
 
-SuperLayout is a library that adds a few custom operators to Swift that makes using the new NSLayoutAnchor API in iOS 9 much less verbose and a pleasure to use. It doesn't override already-defined methods in `Equatable` (such as `==` and `>=`), like other frameworks do, and defines ones that are logical and easily understandable to anyone who might be inheriting your codebase or joining your team. The `equalTo` operator is just a `~`, and the greater than or equal to and less than or equal to operators are just `Option` + `<` and `Option` + `>`, respectively.
+SuperLayout is a library that adds a few custom operators to Swift that makes using the amazing (and...perhaps verbose :) ) NSLayoutAnchor API introduced in iOS 9 a breeze. Unlike other libraries, it doesn't override already-defined methods in `Equatable` (such as `==` and `>=`), and defines ones that are logical and easily understandable to anyone who might be inheriting your codebase or joining your team.
 
-In short, turn this:
+The `equalTo` operator is just a `~`, and the greater than or equal to and less than or equal to operators are just `Option` + `<` and `Option` + `>`, respectively.
+
+In short, SuperLayout turns this:
 
 <img src='old1.png' width='589px' />
 
@@ -14,15 +16,19 @@ Into this:
 Installation
 ------------
 
-SuperLayout is available via CocoaPods and SwiftPM. In your Podfile, just specify:
+SuperLayout is available via CocoaPods and SwiftPM. If you're using CocoaPods, just specify this in your Podfile:
 
     pod 'SuperLayout', '~> 0.2'
 
 ### Before You Use
 
-To use this library, you should have a basic understanding of the [`NSLayoutAnchor` API](https://developer.apple.com/reference/uikit/nslayoutanchor). If not, read up, and then check out the reference below to get started.
+To use this library, you should have a basic understanding of the [`NSLayoutAnchor` API](https://developer.apple.com/reference/uikit/nslayoutanchor). If not, read up, and then check out the documentation below to get started.
+
+---
 
 ## NSLayoutConstraint Reference
+
+Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingMaskIntoConstraints` for the views you'd like to manage with Auto Layout. Doing this automatically is too magical for my tastes. Feel free to create an issue if you disagree.
 
 #### [constraint(equalTo:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500946-constraint)
 
