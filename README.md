@@ -13,9 +13,7 @@ Examples
 
 #### [constraint(equalTo:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500946-constraint)
 
-```swift
-viewA.rightAnchor ~~ viewB.leftAnchor
-```
+➥ `viewA.rightAnchor ~~ viewB.leftAnchor`
 
 <details>
   <summary>See original</summary>
@@ -52,6 +50,51 @@ viewA.rightAnchor ~~ viewB.leftAnchor
 
   ```swift
   viewA.rightAnchor.constraint(greaterThanOrEqualTo: viewB.leftAnchor).isActive = true
+  ```
+
+</details>
+
+---
+
+#### [constraint(greaterThanOrEqualTo:constant:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500948-constraint)
+
+➥ `viewA.rightAnchor ≥≥ viewB.leftAnchor + C`
+
+<details>
+  <summary>See original</summary>
+
+  ```swift
+  viewA.rightAnchor.constraint(greaterThanOrEqualTo: viewB.leftAnchor, constant: C).isActive = true
+  ```
+
+</details>
+
+---
+
+#### [constraint(lessThanOrEqualTo:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500953-constraint)
+
+➥ `viewA.rightAnchor ≤≤ viewB.leftAnchor`
+
+<details>
+  <summary>See original</summary>
+
+  ```swift
+  viewA.rightAnchor.constraint(lessThanOrEqualTo: viewB.leftAnchor).isActive = true
+  ```
+
+</details>
+
+---
+
+#### [constraint(lessThanOrEqualTo:constant:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500959-constraint)
+
+➥ `viewA.rightAnchor ≤≤ viewB.leftAnchor + C`
+
+<details>
+  <summary>See original</summary>
+
+  ```swift
+  viewA.rightAnchor.constraint(lessThanOrEqualTo: viewB.leftAnchor, constant: C).isActive = true
   ```
 
 </details>
