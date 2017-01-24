@@ -45,7 +45,7 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 ➥ `viewA.rightAnchor ~~ viewB.leftAnchor`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.rightAnchor.constraint(equalTo: viewB.leftAnchor).isActive = true
@@ -53,14 +53,12 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
----
-
 #### [constraint(equalTo:constant:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500937-constraint)
 
 ➥ `viewA.rightAnchor ~~ viewB.leftAnchor + C`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.rightAnchor.constraint(equalTo: viewB.leftAnchor, constant: C).isActive = true
@@ -68,14 +66,12 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
----
-
 #### [constraint(greaterThanOrEqualTo:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500936-constraint)
 
 ➥ `viewA.rightAnchor ≥≥ viewB.leftAnchor`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.rightAnchor.constraint(greaterThanOrEqualTo: viewB.leftAnchor).isActive = true
@@ -83,14 +79,12 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
----
-
 #### [constraint(greaterThanOrEqualTo:constant:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500948-constraint)
 
 ➥ `viewA.rightAnchor ≥≥ viewB.leftAnchor + C`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.rightAnchor.constraint(greaterThanOrEqualTo: viewB.leftAnchor, constant: C).isActive = true
@@ -98,14 +92,12 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
----
-
 #### [constraint(lessThanOrEqualTo:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500953-constraint)
 
 ➥ `viewA.rightAnchor ≤≤ viewB.leftAnchor`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.rightAnchor.constraint(lessThanOrEqualTo: viewB.leftAnchor).isActive = true
@@ -113,14 +105,12 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
----
-
 #### [constraint(lessThanOrEqualTo:constant:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500959-constraint)
 
 ➥ `viewA.rightAnchor ≤≤ viewB.leftAnchor + C`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.rightAnchor.constraint(lessThanOrEqualTo: viewB.leftAnchor, constant: C).isActive = true
@@ -135,7 +125,7 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 ➥ `viewA.heightAnchor ~~ viewB.heightAnchor * M`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.heightAnchor.constraint(equalTo: viewB.heightAnchor, multiplier: M).isActive = true
@@ -143,14 +133,12 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
----
-
 #### [constraint(equalTo:multiplier:constant:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500934-constraint)
 
 ➥ `viewA.heightAnchor ~~ viewB.heightAnchor * M + C`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.heightAnchor.constraint(equalTo: viewB.heightAnchor, multiplier: M, constant: C).isActive = true
@@ -158,14 +146,12 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
----
-
 #### [constraint(equalToConstant:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500941-constraint)
 
 ➥ `viewA.heightAnchor ~~ C`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.heightAnchor.constraint(equalToConstant: C).isActive = true
@@ -173,14 +159,12 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
----
-
 #### [constraint(greaterThanOrEqualTo:multiplier:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500961-constraint)
 
 ➥ `viewA.heightAnchor ≥≥ viewB.heightAnchor * M`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.heightAnchor.constraint(greaterThanOrEqualTo: viewB.heightAnchor, multiplier: M).isActive = true
@@ -188,14 +172,12 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
----
-
 #### [constraint(greaterThanOrEqualTo:multiplier:constant:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500965-constraint)
 
 ➥ `viewA.heightAnchor ≥≥ viewB.heightAnchor * M + C`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.heightAnchor.constraint(greaterThanOrEqualTo: viewB.heightAnchor, multiplier: M, constant: C).isActive = true
@@ -203,14 +185,12 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
----
-
 #### [constraint(greaterThanOrEqualToConstant:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500939-constraint)
 
 ➥ `viewA.heightAnchor ≥≥ C`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.heightAnchor.constraint(greaterThanOrEqualToConstant: C).isActive = true
@@ -218,14 +198,12 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
----
-
 #### [constraint(lessThanOrEqualTo:multiplier:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500943-constraint)
 
 ➥ `viewA.heightAnchor ≤≤ viewB.heightAnchor * M`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.heightAnchor.constraint(lessThanOrEqualTo: viewB.heightAnchor, multiplier: M).isActive = true
@@ -233,14 +211,12 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
----
-
 #### [constraint(lessThanOrEqualTo:multiplier:constant:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500957-constraint)
 
 ➥ `viewA.heightAnchor ≤≤ viewB.heightAnchor * M + C`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.heightAnchor.constraint(lessThanOrEqualTo: viewB.heightAnchor, multiplier: M, constant: C).isActive = true
@@ -248,14 +224,12 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
----
-
 #### [constraint(lessThanOrEqualToConstant:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500963-constraint)
 
 ➥ `viewA.heightAnchor ≤≤ C`
 
 <details>
-  <summary>See original</summary>
+  <summary>Original</summary>
 
   ```swift
   viewA.heightAnchor.constraint(lessThanOrEqualToConstant: C).isActive = true
