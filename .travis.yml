@@ -3,3 +3,5 @@ xcode_project: SuperLayout.xcodeproj
 xcode_scheme: SuperLayout
 xcode_sdk: iphonesimulator10.2
 osx_image: xcode8.2
+script:
+  - pod spec lint
