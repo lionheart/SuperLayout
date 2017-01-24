@@ -24,7 +24,7 @@ buttonA.rightAnchor ~~ buttonB.leftAnchor - 10
 
 </details>
 
-</hr>
+---
 
 Likewise, you can set heights, widths, and add constants and multipliers just as with the standard Auto Layout API.
 
