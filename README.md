@@ -8,6 +8,9 @@ Summary
 
 First, this assumes you have a basic understanding of the `NSLayoutAnchor` API. If not, read up. It's quite straightforward. Essentially, Auto Layout constraints are formed by creating relationships between _anchors_. For instance, let's say you have two buttons that you've added to a superview, and you want them to appear adjacent to each other, with the right of the first button attached to the left of the second. Here's how you might create a constraint using the original API.
 
+Examples
+--------
+
 ```swift
 buttonA.rightAnchor ~~ buttonB.leftAnchor - 10
 ```
@@ -21,10 +24,11 @@ buttonA.rightAnchor ~~ buttonB.leftAnchor - 10
 
 </details>
 
+</hr>
+
 Likewise, you can set heights, widths, and add constants and multipliers just as with the standard Auto Layout API.
 
 ```swift
-// Make `buttonA` 50px wide
 buttonA.widthAnchor ~~ 50
 ```
 
@@ -38,7 +42,6 @@ buttonA.widthAnchor ~~ 50
 </details>
 
 ```swift
-// Make the width of `buttonB` 1.2 times the width of `buttonA` + 20px
 buttonA.widthAnchor ≥≥ buttonA.widthAnchor * 1.2 + 20
 ```
 
@@ -52,7 +55,6 @@ buttonA.widthAnchor ≥≥ buttonA.widthAnchor * 1.2 + 20
 </details>
 
 ```swift
-// Center on the Y-axis, offset by -50px
 buttonA.centerYAnchor ~~ view.centerYAnchor - 20
 ```
 
