@@ -43,7 +43,7 @@ To use this library, you should have a basic understanding of the [`NSLayoutAnch
 
 ## NSLayoutConstraint Reference
 
-Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingMaskIntoConstraints` for the views you'd like to manage with Auto Layout. Disabling this setting automatically is too magical for me. Feel free to create an issue if you disagree.
+> Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingMaskIntoConstraints` for the views you'd like to manage with Auto Layout. Disabling this setting automatically is too magical for me. Feel free to create an issue if you disagree.
 
 [constraint(equalTo:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500946-constraint) ➥ `viewA.rightAnchor ~~ viewB.leftAnchor`
 
