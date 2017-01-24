@@ -18,13 +18,11 @@ SuperLayout is available via CocoaPods and SwiftPM. In your Podfile, just specif
 
     pod 'SuperLayout', '~> 0.2'
 
-Before You Use
---------------
+### Before You Use
 
 To use this library, you should have a basic understanding of the [`NSLayoutAnchor` API](https://developer.apple.com/reference/uikit/nslayoutanchor). If not, read up, and then check out the reference below to get started.
 
-Reference
----------
+## NSLayoutConstraint Reference
 
 #### [constraint(equalTo:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500946-constraint)
 
@@ -114,46 +112,137 @@ Reference
 
 </details>
 
+## NSLayoutDimension Reference
+
+#### [constraint(equalTo:multiplier:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500951-constraint)
+
+➥ `viewA.heightAnchor ~~ viewB.heightAnchor * M`
+
+<details>
+  <summary>See original</summary>
+
+  ```swift
+  viewA.heightAnchor.constraint(equalTo: viewB.heightAnchor, multiplier: M).isActive = true
+  ```
+
+</details>
+
 ---
 
-Likewise, you can set heights, widths, and add constants and multipliers just as with the standard Auto Layout API.
+#### [constraint(equalTo:multiplier:constant:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500934-constraint)
 
-```swift
-viewA.widthAnchor ~~ 50
-```
+➥ `viewA.heightAnchor ~~ viewB.heightAnchor * M + C`
 
 <details>
   <summary>See original</summary>
 
   ```swift
-  viewA.widthAnchor.constraint(equalToConstant: 50).isActive = true
+  viewA.heightAnchor.constraint(equalTo: viewB.heightAnchor, multiplier: M, constant: C).isActive = true
   ```
 
 </details>
 
-```swift
-viewA.widthAnchor ≥≥ viewA.widthAnchor * 1.2 + 20
-```
+---
+
+#### [constraint(equalToConstant:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500941-constraint)
+
+➥ `viewA.heightAnchor ~~ C`
 
 <details>
   <summary>See original</summary>
 
   ```swift
-  viewA.widthAnchor.constraint(greaterThanOrEqualTo: viewA.widthAnchor, multiplier: 1.2, constant: 20).isActive = true
+  viewA.heightAnchor.constraint(equalToConstant: C).isActive = true
   ```
 
 </details>
 
-```swift
-viewA.centerYAnchor ~~ view.centerYAnchor - 20
-```
+---
+
+#### [constraint(greaterThanOrEqualTo:multiplier:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500961-constraint)
+
+➥ `viewA.heightAnchor ≥≥ viewB.heightAnchor * M`
 
 <details>
   <summary>See original</summary>
 
   ```swift
-  viewA.centerYAnchor.constraint(lessThanOrEqualTo: view.centerYAnchor, multiplier: 1, constant: -20).isActive = true
+  viewA.heightAnchor.constraint(greaterThanOrEqualTo: viewB.heightAnchor, multiplier: M).isActive = true
   ```
 
 </details>
 
+---
+
+#### [constraint(greaterThanOrEqualTo:multiplier:constant:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500965-constraint)
+
+➥ `viewA.heightAnchor ≥≥ viewB.heightAnchor * M + C`
+
+<details>
+  <summary>See original</summary>
+
+  ```swift
+  viewA.heightAnchor.constraint(greaterThanOrEqualTo: viewB.heightAnchor, multiplier: M, constant: C).isActive = true
+  ```
+
+</details>
+
+---
+
+#### [constraint(greaterThanOrEqualToConstant:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500939-constraint)
+
+➥ `viewA.heightAnchor ≥≥ C`
+
+<details>
+  <summary>See original</summary>
+
+  ```swift
+  viewA.heightAnchor.constraint(greaterThanOrEqualToConstant: C).isActive = true
+  ```
+
+</details>
+
+---
+
+#### [constraint(lessThanOrEqualTo:multiplier:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500943-constraint)
+
+➥ `viewA.heightAnchor ≤≤ viewB.heightAnchor * M`
+
+<details>
+  <summary>See original</summary>
+
+  ```swift
+  viewA.heightAnchor.constraint(lessThanOrEqualTo: viewB.heightAnchor, multiplier: M).isActive = true
+  ```
+
+</details>
+
+---
+
+#### [constraint(lessThanOrEqualTo:multiplier:constant:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500957-constraint)
+
+➥ `viewA.heightAnchor ≤≤ viewB.heightAnchor * M + C`
+
+<details>
+  <summary>See original</summary>
+
+  ```swift
+  viewA.heightAnchor.constraint(lessThanOrEqualTo: viewB.heightAnchor, multiplier: M, constant: C).isActive = true
+  ```
+
+</details>
+
+---
+
+#### [constraint(lessThanOrEqualToConstant:)](https://developer.apple.com/reference/uikit/nslayoutdimension/1500963-constraint)
+
+➥ `viewA.heightAnchor ≤≤ C`
+
+<details>
+  <summary>See original</summary>
+
+  ```swift
+  viewA.heightAnchor.constraint(lessThanOrEqualToConstant: C).isActive = true
+  ```
+
+</details>
