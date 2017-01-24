@@ -5,7 +5,6 @@ SuperLayout
 [![Version](https://img.shields.io/cocoapods/v/SuperLayout.svg?style=flat)](http://cocoapods.org/pods/SuperLayout)
 [![License](https://img.shields.io/cocoapods/l/SuperLayout.svg?style=flat)](http://cocoapods.org/pods/SuperLayout)
 [![Platform](https://img.shields.io/cocoapods/p/SuperLayout.svg?style=flat)](http://cocoapods.org/pods/SuperLayout)
-[![Apps](https://img.shields.io/cocoapods/at/AFNetworking.svg?style=flat)](http://cocoapods.org/pods/SuperLayout)
 
 SuperLayout is a library that adds a few custom operators to Swift that makes using the amazing (and…perhaps verbose 😜) NSLayoutAnchor API introduced in iOS 9 a breeze. Unlike other libraries, it doesn't override already-defined methods in `Equatable` (such as `==` and `>=`), and defines ones that are logical and easily understandable to anyone who might be inheriting your codebase or joining your team.
 
