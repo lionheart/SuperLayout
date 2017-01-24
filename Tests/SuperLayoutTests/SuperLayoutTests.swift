@@ -27,9 +27,16 @@ class SuperLayoutTests: XCTestCase {
         XCTAssert(constraint.multiplier == 1)
     }
 
+    func testConstraint3() {
+        let constraint = viewA.centerXAnchor ~~ viewB.centerXAnchor * 1.2
+        XCTAssert(constraint.multiplier == 1.2)
+    }
+
     static var allTests : [(String, (SuperLayoutTests) -> () throws -> Void)] {
         return [
-            ("testExample", testConstraint1),
+            ("testConstraint1", testConstraint1),
+            ("testConstraint2", testConstraint2),
+            ("testConstraint3", testConstraint3),
         ]
     }
 }
