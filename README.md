@@ -53,9 +53,7 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
 
 </details>
 
-#### [constraint(equalTo:constant:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500937-constraint)
-
-➥ `viewA.rightAnchor ~~ viewB.leftAnchor + C`
+[constraint(equalTo:constant:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500937-constraint) ➥ `viewA.rightAnchor ~~ viewB.leftAnchor + C`
 
 <details>
   <summary>Original</summary>
@@ -117,6 +115,8 @@ Note: SuperLayout does not (yet) automatically turn off `translatesAutoresizingM
   ```
 
 </details>
+
+---
 
 ## NSLayoutDimension Reference
 
