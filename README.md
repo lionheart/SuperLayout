@@ -10,11 +10,11 @@ First, this assumes you have a basic understanding of the [`NSLayoutAnchor` API]
 
 In short, turn this:
 
-<img src='old1.png' width='626px' />
+<img src='old1.png' width='589px' />
 
 Into this:
 
-<img src='new1.png' width='612px' />
+<img src='new1.png' width='355px' />
 
 NSLayoutConstraint
 ------------------
