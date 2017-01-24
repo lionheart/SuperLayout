@@ -3,11 +3,6 @@ SuperLayout
 
 SuperLayout is a library that adds a few custom operators to Swift that makes using the new NSLayoutAnchor API in iOS 9 much less verbose and a pleasure to use. It doesn't override already-defined methods in `Equatable` (such as `==` and `>=`), like other frameworks do, and defines ones that are logical and easily understandable to anyone who might be inheriting your codebase or joining your team. The `equalTo` operator is just a `~`, and the greater than or equal to and less than or equal to operators are just `Option` + `<` and `Option` + `>`, respectively.
 
-Summary
--------
-
-First, this assumes you have a basic understanding of the [`NSLayoutAnchor` API](https://developer.apple.com/reference/uikit/nslayoutanchor). If not, read up. It's quite straightforward. Essentially, Auto Layout constraints are formed by creating relationships between _anchors_. For instance, let's say you have two buttons that you've added to a superview, and you want them to appear adjacent to each other, with the right of the first button attached to the left of the second. Here's how you might create a constraint using the original API.
-
 In short, turn this:
 
 <img src='old1.png' width='589px' />
@@ -15,6 +10,18 @@ In short, turn this:
 Into this:
 
 <img src='new1.png' width='355px' />
+
+Installation
+------------
+
+SuperLayout is available via CocoaPods and SwiftPM. In your Podfile, just specify:
+
+    pod 'SuperLayout', '~> 0.2'
+
+Before You Use
+--------------
+
+To use this library, you should have a basic understanding of the [`NSLayoutAnchor` API](https://developer.apple.com/reference/uikit/nslayoutanchor). If not, read up. It's quite straightforward. Essentially, Auto Layout constraints are formed by creating relationships between _anchors_. For instance, let's say you have two buttons that you've added to a superview, and you want them to appear adjacent to each other, with the right of the first button attached to the left of the second. Here's how you might create a constraint using the original API.
 
 Reference
 ---------
