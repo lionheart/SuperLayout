@@ -11,7 +11,7 @@ First, this assumes you have a basic understanding of the [`NSLayoutAnchor` API]
 Examples
 --------
 
-#### `constraint(equalTo:)`:
+#### [constraint(equalTo:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500946-constraint)
 
 ```swift
 viewA.rightAnchor ~~ viewB.leftAnchor
@@ -30,13 +30,28 @@ viewA.rightAnchor ~~ viewB.leftAnchor
 
 #### [constraint(equalTo:constant:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500937-constraint)
 
-➥ `viewA.rightAnchor ~~ viewB.leftAnchor - 10`
+➥ `viewA.rightAnchor ~~ viewB.leftAnchor + C`
 
 <details>
   <summary>See original</summary>
 
   ```swift
-  viewA.rightAnchor.constraint(equalTo: viewB.leftAnchor, constant: -10).isActive = true
+  viewA.rightAnchor.constraint(equalTo: viewB.leftAnchor, constant: C).isActive = true
+  ```
+
+</details>
+
+---
+
+#### [constraint(greaterThanOrEqualTo:)](https://developer.apple.com/reference/uikit/nslayoutanchor/1500936-constraint)
+
+➥ `viewA.rightAnchor ≥≥ viewB.leftAnchor`
+
+<details>
+  <summary>See original</summary>
+
+  ```swift
+  viewA.rightAnchor.constraint(greaterThanOrEqualTo: viewB.leftAnchor).isActive = true
   ```
 
 </details>
