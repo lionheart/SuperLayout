@@ -3,7 +3,8 @@ SuperLayout
 
 SuperLayout is a library that adds a few custom operators to Swift that makes using the amazing (and...perhaps verbose :) ) NSLayoutAnchor API introduced in iOS 9 a breeze. Unlike other libraries, it doesn't override already-defined methods in `Equatable` (such as `==` and `>=`), and defines ones that are logical and easily understandable to anyone who might be inheriting your codebase or joining your team.
 
-The `equalTo` operator is just a `~`, and the greater than or equal to and less than or equal to operators are just `Option` + `<` and `Option` + `>`, respectively.
+What It Does
+------------
 
 In short, SuperLayout turns this:
 
@@ -12,6 +13,13 @@ In short, SuperLayout turns this:
 Into this:
 
 <img src='new1.png' width='355px' />
+
+How it works
+------------
+
+SuperLayout defines just three custom operators: `~`, `≥`, and `≤`. `~` roughly corresponds to `equalTo`. The other two were chosen with practicality in mind; `≥` and `≤` are just `Option` + `<` and `Option` + `>` in Xcode, so no need to copy-paste characters when writing constraints.
+
+Why create new operators instead of using `==`, `<=`, and `>=`. I have an easy answer: those operators already have meaning, and don't have assignment semantics. You would never write "1 == 2" with the expectation that it would return anything other than a `Bool` indicating equality. Same goes for the others.
 
 Installation
 ------------
