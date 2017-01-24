@@ -12,11 +12,14 @@ First, this assumes you have a basic understanding of the `NSLayoutAnchor` API. 
 buttonA.rightAnchor.constraint(equalTo: buttonB.leftAnchor, constant: -10).isActive = true
 ```
 
--->
+<details>
+  <summary>See original</summary>
 
-```swift
-buttonA.rightAnchor ~~ buttonB.leftAnchor - 10
-```
+  ```swift
+  buttonA.rightAnchor ~~ buttonB.leftAnchor - 10
+  ```
+
+</details>
 
 Likewise, you can set heights, widths, and add constants and multipliers just as with the standard Auto Layout API.
 
