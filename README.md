@@ -11,17 +11,34 @@ First, this assumes you have a basic understanding of the [`NSLayoutAnchor` API]
 Examples
 --------
 
-### `constraint(equalTo:)`:
+#### `constraint(equalTo:)`:
 
 ```swift
-buttonA.rightAnchor ~~ buttonB.leftAnchor - 10
+viewA.rightAnchor ~~ viewB.leftAnchor
 ```
 
 <details>
   <summary>See original</summary>
 
   ```swift
-  buttonA.rightAnchor.constraint(equalTo: buttonB.leftAnchor, constant: -10).isActive = true
+  viewA.rightAnchor.constraint(equalTo: viewB.leftAnchor).isActive = true
+  ```
+
+</details>
+
+---
+
+#### `constraint(equalTo:constant:)`:
+
+```swift
+viewA.rightAnchor ~~ viewB.leftAnchor - 10
+```
+
+<details>
+  <summary>See original</summary>
+
+  ```swift
+  viewA.rightAnchor.constraint(equalTo: viewB.leftAnchor, constant: -10).isActive = true
   ```
 
 </details>
@@ -31,40 +48,40 @@ buttonA.rightAnchor ~~ buttonB.leftAnchor - 10
 Likewise, you can set heights, widths, and add constants and multipliers just as with the standard Auto Layout API.
 
 ```swift
-buttonA.widthAnchor ~~ 50
+viewA.widthAnchor ~~ 50
 ```
 
 <details>
   <summary>See original</summary>
 
   ```swift
-  buttonA.widthAnchor.constraint(equalToConstant: 50).isActive = true
+  viewA.widthAnchor.constraint(equalToConstant: 50).isActive = true
   ```
 
 </details>
 
 ```swift
-buttonA.widthAnchor ≥≥ buttonA.widthAnchor * 1.2 + 20
+viewA.widthAnchor ≥≥ viewA.widthAnchor * 1.2 + 20
 ```
 
 <details>
   <summary>See original</summary>
 
   ```swift
-  buttonA.widthAnchor.constraint(greaterThanOrEqualTo: buttonA.widthAnchor, multiplier: 1.2, constant: 20).isActive = true
+  viewA.widthAnchor.constraint(greaterThanOrEqualTo: viewA.widthAnchor, multiplier: 1.2, constant: 20).isActive = true
   ```
 
 </details>
 
 ```swift
-buttonA.centerYAnchor ~~ view.centerYAnchor - 20
+viewA.centerYAnchor ~~ view.centerYAnchor - 20
 ```
 
 <details>
   <summary>See original</summary>
 
   ```swift
-  buttonA.centerYAnchor.constraint(lessThanOrEqualTo: view.centerYAnchor, multiplier: 1, constant: -20).isActive = true
+  viewA.centerYAnchor.constraint(lessThanOrEqualTo: view.centerYAnchor, multiplier: 1, constant: -20).isActive = true
   ```
 
 </details>
