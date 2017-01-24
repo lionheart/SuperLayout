@@ -22,7 +22,7 @@ Into this:
 How it works
 ------------
 
-SuperLayout defines just three custom operators: `~`, `≥`, and `≤`. `~` roughly corresponds to `equalTo`, `≥` to `greaterThanOrEqualTo`, and `≤` to `lessThanOrEqualTo`. The greater than and less than operators were chosen with practicality in mind; `≥` and `≤` have simple keyboard shortcuts (just `Option` + `<` and `Option` + `>` in Xcode), so there's no need to copy-paste characters when writing constraints.
+SuperLayout defines just three custom operators: `~~`, `≥`, and `≤`. `~~` roughly corresponds to `equalTo`, `≥` to `greaterThanOrEqualTo`, and `≤` to `lessThanOrEqualTo`. The greater than and less than operators were chosen with practicality in mind; `≥` and `≤` have simple keyboard shortcuts (just `Option` + `<` and `Option` + `>` in Xcode), so there's no need to copy-paste characters when writing constraints.
 
 You might be wondering: why create new operators instead of using `==`, `<=`, and `>=`?
 
