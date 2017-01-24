@@ -28,7 +28,7 @@ class SuperLayoutTests: XCTestCase {
     }
 
     func testConstraint3() {
-        let constraint = viewA.centerXAnchor ~~ viewB.centerXAnchor * 1.2
+        let constraint = viewA.widthAnchor ~~ viewB.widthAnchor * 1.2
         XCTAssert(constraint.multiplier == 1.2)
     }
 
