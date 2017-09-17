@@ -5,3 +5,4 @@
 build/
 *.tgz
 *.docset/
+docs/filelist*
