@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SuperLayout  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    <style type='text/css'>body { font-family: -apple-system !important; }</style>
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="SuperLayout  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          SuperLayout Docs
+        </a>
+         (13% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/lionheart/SuperLayout">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">SuperLayout Reference</a>
+      <img class="carat" src="img/carat.png" />
+      SuperLayout  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/NSLayoutDimension.html">NSLayoutDimension</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/NSLayoutXAxisAnchor.html">NSLayoutXAxisAnchor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/NSLayoutYAxisAnchor.html">NSLayoutYAxisAnchor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AxisAnchoring.html">AxisAnchoring</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AxisAnchoringWithMethods.html">AxisAnchoringWithMethods</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DimensionAnchoring.html">DimensionAnchoring</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DimensionAnchoringWithMethods.html">DimensionAnchoringWithMethods</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/LayoutContainer.html">LayoutContainer</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='superlayout' class='heading'>SuperLayout</h1>
+
+<p><a href="https://travis-ci.org/lionheart/SuperLayout"><img src="http://img.shields.io/travis/lionheart/SuperLayout.svg?style=flat" alt="CI Status"></a>
+<a href="http://cocoapods.org/pods/SuperLayout"><img src="https://img.shields.io/cocoapods/v/SuperLayout.svg?style=flat" alt="Version"></a>
+<a href="http://cocoapods.org/pods/SuperLayout"><img src="https://img.shields.io/cocoapods/l/SuperLayout.svg?style=flat" alt="License"></a>
+<a href="http://cocoapods.org/pods/SuperLayout"><img src="https://img.shields.io/cocoapods/p/SuperLayout.svg?style=flat" alt="Platform"></a></p>
+
+<p>SuperLayout is a library that adds a few custom operators to Swift that makes using the amazing (and…perhaps verbose 😜) NSLayoutAnchor API introduced in iOS 9 a breeze. Unlike other libraries, it doesn&rsquo;t override already-defined methods in <code>Equatable</code> (such as <code>==</code> and <code>&gt;=</code>), and defines ones that are logical and easily understandable to anyone who might be inheriting your codebase or joining your team.</p>
+<h2 id='what-it-does' class='heading'>What It Does</h2>
+
+<p>In short, SuperLayout turns this:</p>
+
+<p><img src='old1.png' width='589px' /></p>
+
+<p>Into this:</p>
+
+<p><img src='new1.png' width='355px' /></p>
+<h2 id='how-it-works' class='heading'>How it works</h2>
+
+<p>SuperLayout defines just three custom operators: <code>~~</code>, <code>≥</code>, and <code>≤</code>. <code>~~</code> roughly corresponds to <code>equalTo</code>, <code>≥</code> to <code>greaterThanOrEqualTo</code>, and <code>≤</code> to <code>lessThanOrEqualTo</code>. The greater than and less than operators were chosen with practicality in mind; <code>≥</code> and <code>≤</code> have simple keyboard shortcuts (just <code>Option</code> + <code>&lt;</code> and <code>Option</code> + <code>&gt;</code> in Xcode), so there&rsquo;s no need to copy-paste characters when writing constraints.</p>
+
+<p>You might be wondering: why create new operators instead of using <code>==</code>, <code>&lt;=</code>, and <code>&gt;=</code>?</p>
+
+<p>I have an easy answer: those operators already have meaning, and don&rsquo;t have assignment semantics. You would never write <code>1 == 2</code> with the expectation that it would return anything other than a <code>Bool</code> indicating equality.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>SuperLayout is available via CocoaPods and SwiftPM. If you&rsquo;re using CocoaPods, just specify this in your Podfile:</p>
+<pre class="highlight plaintext"><code>pod 'SuperLayout', '~&gt; 0.2'
+</code></pre>
+<h3 id='before-you-use' class='heading'>Before You Use</h3>
+
+<p>To use this library, you should have a basic understanding of the <a href="https://developer.apple.com/reference/uikit/nslayoutanchor"><code>NSLayoutAnchor</code> API</a>. If not, read up, and then check out the documentation below to get started.</p>
+
+<hr>
+<h2 id='nslayoutconstraint-reference' class='heading'>NSLayoutConstraint Reference</h2>
+
+<blockquote>
+<p>Note: SuperLayout does not (yet) automatically turn off <code>translatesAutoresizingMaskIntoConstraints</code> for the views you&rsquo;d like to manage with Auto Layout. Disabling this setting automatically is too magical for me. Feel free to create an issue if you disagree.</p>
+</blockquote>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutanchor/1500946-constraint">constraint(equalTo:)</a> ➥ <code>viewA.rightAnchor ~~ viewB.leftAnchor</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.rightAnchor.constraint(equalTo: viewB.leftAnchor).isActive = true
+  &rdquo;`
+
+</details>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutanchor/1500937-constraint">constraint(equalTo:constant:)</a> ➥ <code>viewA.rightAnchor ~~ viewB.leftAnchor + C</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.rightAnchor.constraint(equalTo: viewB.leftAnchor, constant: C).isActive = true
+  &rdquo;`
+
+</details>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutanchor/1500936-constraint">constraint(greaterThanOrEqualTo:)</a> ➥ <code>viewA.rightAnchor ≥≥ viewB.leftAnchor</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.rightAnchor.constraint(greaterThanOrEqualTo: viewB.leftAnchor).isActive = true
+  &rdquo;`
+
+</details>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutanchor/1500948-constraint">constraint(greaterThanOrEqualTo:constant:)</a> ➥ <code>viewA.rightAnchor ≥≥ viewB.leftAnchor + C</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.rightAnchor.constraint(greaterThanOrEqualTo: viewB.leftAnchor, constant: C).isActive = true
+  &rdquo;`
+
+</details>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutanchor/1500953-constraint">constraint(lessThanOrEqualTo:)</a> ➥ <code>viewA.rightAnchor ≤≤ viewB.leftAnchor</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.rightAnchor.constraint(lessThanOrEqualTo: viewB.leftAnchor).isActive = true
+  &rdquo;`
+
+</details>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutanchor/1500959-constraint">constraint(lessThanOrEqualTo:constant:)</a> ➥ <code>viewA.rightAnchor ≤≤ viewB.leftAnchor + C</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.rightAnchor.constraint(lessThanOrEqualTo: viewB.leftAnchor, constant: C).isActive = true
+  &rdquo;`
+
+</details>
+
+<hr>
+<h2 id='nslayoutdimension-reference' class='heading'>NSLayoutDimension Reference</h2>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutdimension/1500951-constraint">constraint(equalTo:multiplier:)</a> ➥ <code>viewA.heightAnchor ~~ viewB.heightAnchor * M</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.heightAnchor.constraint(equalTo: viewB.heightAnchor, multiplier: M).isActive = true
+  &rdquo;`
+
+</details>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutdimension/1500934-constraint">constraint(equalTo:multiplier:constant:)</a> ➥ <code>viewA.heightAnchor ~~ viewB.heightAnchor * M + C</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.heightAnchor.constraint(equalTo: viewB.heightAnchor, multiplier: M, constant: C).isActive = true
+  &rdquo;`
+
+</details>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutdimension/1500941-constraint">constraint(equalToConstant:)</a> ➥ <code>viewA.heightAnchor ~~ C</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.heightAnchor.constraint(equalToConstant: C).isActive = true
+  &rdquo;`
+
+</details>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutdimension/1500961-constraint">constraint(greaterThanOrEqualTo:multiplier:)</a> ➥ <code>viewA.heightAnchor ≥≥ viewB.heightAnchor * M</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.heightAnchor.constraint(greaterThanOrEqualTo: viewB.heightAnchor, multiplier: M).isActive = true
+  &rdquo;`
+
+</details>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutdimension/1500965-constraint">constraint(greaterThanOrEqualTo:multiplier:constant:)</a> ➥ <code>viewA.heightAnchor ≥≥ viewB.heightAnchor * M + C</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.heightAnchor.constraint(greaterThanOrEqualTo: viewB.heightAnchor, multiplier: M, constant: C).isActive = true
+  &rdquo;`
+
+</details>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutdimension/1500939-constraint">constraint(greaterThanOrEqualToConstant:)</a> ➥ <code>viewA.heightAnchor ≥≥ C</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.heightAnchor.constraint(greaterThanOrEqualToConstant: C).isActive = true
+  &rdquo;`
+
+</details>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutdimension/1500943-constraint">constraint(lessThanOrEqualTo:multiplier:)</a> ➥ <code>viewA.heightAnchor ≤≤ viewB.heightAnchor * M</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.heightAnchor.constraint(lessThanOrEqualTo: viewB.heightAnchor, multiplier: M).isActive = true
+  &rdquo;`
+
+</details>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutdimension/1500957-constraint">constraint(lessThanOrEqualTo:multiplier:constant:)</a> ➥ <code>viewA.heightAnchor ≤≤ viewB.heightAnchor * M + C</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.heightAnchor.constraint(lessThanOrEqualTo: viewB.heightAnchor, multiplier: M, constant: C).isActive = true
+  &rdquo;`
+
+</details>
+
+<p><a href="https://developer.apple.com/reference/uikit/nslayoutdimension/1500963-constraint">constraint(lessThanOrEqualToConstant:)</a> ➥ <code>viewA.heightAnchor ≤≤ C</code></p>
+
+<details>
+  <summary>Original</summary>
+
+  &ldquo;`swift
+  viewA.heightAnchor.constraint(lessThanOrEqualToConstant: C).isActive = true
+  &rdquo;`
+
+</details>
+<h2 id='license' class='heading'>License</h2>
+
+<p>LionheartExtensions is available under the Apache 2.0 license. See <a href="LICENSE">LICENSE</a> for more info.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 Lionheart Software LLC</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
