@@ -13,11 +13,11 @@ What It Does
 
 In short, SuperLayout turns this:
 
-<img src='old1.png' width='589px' />
+<img src='https://github.com/lionheart/SuperLayout/raw/master/old1.png' width='589px' />
 
 Into this:
 
-<img src='new1.png' width='355px' />
+<img src='https://github.com/lionheart/SuperLayout/raw/master/new1.png' width='355px' />
 
 How it works
 ------------
