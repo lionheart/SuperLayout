@@ -8,9 +8,6 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     <style type='text/css'>body { font-family: -apple-system !important; }</style>
-    <script src="../js/lunr.min.js" defer></script>
-    <script src="../js/typeahead.jquery.js" defer></script>
-    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -23,13 +20,7 @@
         <a class="header-link" href="../index.html">
           SuperLayout Docs
         </a>
-         (13% documented)
-      </p>
-    
-      <p class="header-col--secondary">
-        <form role="search" action="../search.json">
-          <input type="text" placeholder="Search documentation" data-typeahead>
-        </form>
+         (12% documented)
       </p>
     
         <p class="header-col header-col--secondary">
@@ -122,7 +113,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/0.2.3/Sources/SuperLayout.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -144,7 +135,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/0.2.3/Sources/SuperLayout.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -166,7 +157,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/0.2.3/Sources/SuperLayout.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -188,7 +179,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/0.2.3/Sources/SuperLayout.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -210,7 +201,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/0.2.3/Sources/SuperLayout.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -232,7 +223,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/0.2.3/Sources/SuperLayout.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -259,6 +250,18 @@
                       <div class="abstract">
                         <p>Returns a constraint that defines the anchor’s size attribute as equal to the specified size attribute multiplied by a constant plus an offset.</p>
 
+<p><li>Parameters:</p>
+
+<p><ul>
+<li>lhs: A dimension anchor from a <code>UIView</code>, <code>NSView</code>, or <code>UILayoutGuide</code> object.</li>
+<li>rhs: See <code>lhs</code>.</li>
+</ul></li>
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    An <code>NSLayoutConstraint</code> object that defines the attribute represented by this layout anchor as equal to the attribute represented by the anchor parameter multiplied by an optional m constant plus an optional constant c.</p>
+
+<p></div></p>
+
                         <a href="../Protocols/DimensionAnchoringWithMethods/~~(_:_:).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -269,43 +272,8 @@
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>lhs</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A dimension anchor from a <code>UIView</code>, <code>NSView</code>, or <code>UILayoutGuide</code> object.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>rhs</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>See <code>lhs</code>.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>An <code>NSLayoutConstraint</code> object that defines the attribute represented by this layout anchor as equal to the attribute represented by the anchor parameter multiplied by an optional m constant plus an optional constant c.</p>
-                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/0.2.3/Sources/SuperLayout.swift#L133-L137">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L133-L137">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -328,6 +296,18 @@
                       <div class="abstract">
                         <p>Returns a constraint that defines the anchor’s size attribute as greater than or equal to the specified anchor multiplied by the constant plus an offset.</p>
 
+<p><li>Parameters:</p>
+
+<p><ul>
+<li>lhs: A dimension anchor from a <code>UIView</code>, <code>NSView</code>, or <code>UILayoutGuide</code> object.</li>
+<li>rhs: See <code>lhs</code>.</li>
+</ul></li>
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    An <code>NSLayoutConstraint</code> object that defines the attribute represented by this layout anchor as less than or equal to the attribute represented by the anchor parameter multiplied by an optional m constant plus an optional constant c.</p>
+
+<p></div></p>
+
                         <a href="../Protocols/DimensionAnchoringWithMethods/≤≤(_:_:).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -338,43 +318,8 @@
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>lhs</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A dimension anchor from a <code>UIView</code>, <code>NSView</code>, or <code>UILayoutGuide</code> object.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>rhs</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>See <code>lhs</code>.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>An <code>NSLayoutConstraint</code> object that defines the attribute represented by this layout anchor as less than or equal to the attribute represented by the anchor parameter multiplied by an optional m constant plus an optional constant c.</p>
-                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/0.2.3/Sources/SuperLayout.swift#L146-L150">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L146-L150">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -397,6 +342,18 @@
                       <div class="abstract">
                         <p>Returns a constraint that defines the anchor’s size attribute as greater than or equal to the specified anchor multiplied by the constant plus an offset.</p>
 
+<p><li>Parameters:</p>
+
+<p><ul>
+<li>lhs: A dimension anchor from a <code>UIView</code>, <code>NSView</code>, or <code>UILayoutGuide</code> object.</li>
+<li>rhs: See <code>lhs</code>.</li>
+</ul></li>
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    An NSLayoutConstraint object that defines the attribute represented by this layout anchor as greater than or equal to the attribute represented by the anchor parameter multiplied by an optional m constant plus an optional constant c.</p>
+
+<p></div></p>
+
                         <a href="../Protocols/DimensionAnchoringWithMethods/≥≥(_:_:).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -407,43 +364,8 @@
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>lhs</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A dimension anchor from a <code>UIView</code>, <code>NSView</code>, or <code>UILayoutGuide</code> object.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>rhs</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>See <code>lhs</code>.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>An NSLayoutConstraint object that defines the attribute represented by this layout anchor as greater than or equal to the attribute represented by the anchor parameter multiplied by an optional m constant plus an optional constant c.</p>
-                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/0.2.3/Sources/SuperLayout.swift#L159-L163">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L159-L163">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -468,7 +390,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/0.2.3/Sources/SuperLayout.swift#L166-L170">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L166-L170">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -493,7 +415,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/0.2.3/Sources/SuperLayout.swift#L173-L177">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L173-L177">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -518,7 +440,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/0.2.3/Sources/SuperLayout.swift#L180-L184">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L180-L184">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -532,7 +454,7 @@
     </div>
     <section class="footer">
       <p>&copy; 2017 Lionheart Software LLC</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

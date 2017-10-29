@@ -240,6 +240,27 @@
     },
     {
       "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
+      "line": 133,
+      "symbol": "DimensionAnchoringWithMethods.~~(_:_:).T",
+      "symbol_kind": "source.lang.swift.decl.generic_type_param",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
+      "line": 146,
+      "symbol": "DimensionAnchoringWithMethods.≤≤(_:_:).T",
+      "symbol_kind": "source.lang.swift.decl.generic_type_param",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
+      "line": 159,
+      "symbol": "DimensionAnchoringWithMethods.≥≥(_:_:).T",
+      "symbol_kind": "source.lang.swift.decl.generic_type_param",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
       "line": 166,
       "symbol": "DimensionAnchoringWithMethods.~~(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
@@ -257,6 +278,27 @@
       "line": 180,
       "symbol": "DimensionAnchoringWithMethods.≥≥(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
+      "line": 195,
+      "symbol": "AxisAnchoringWithMethods.~~(_:_:).T",
+      "symbol_kind": "source.lang.swift.decl.generic_type_param",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
+      "line": 208,
+      "symbol": "AxisAnchoringWithMethods.≤≤(_:_:).T",
+      "symbol_kind": "source.lang.swift.decl.generic_type_param",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
+      "line": 221,
+      "symbol": "AxisAnchoringWithMethods.≥≥(_:_:).T",
+      "symbol_kind": "source.lang.swift.decl.generic_type_param",
       "warning": "undocumented"
     }
   ],
