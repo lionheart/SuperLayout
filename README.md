@@ -214,4 +214,4 @@ To use this library, you should have a basic understanding of the [`NSLayoutAnch
 
 ## License
 
-LionheartExtensions is available under the Apache 2.0 license. See [LICENSE](LICENSE) for more info.
+SuperLayout is available under the Apache 2.0 license. See [LICENSE](LICENSE) for more info.
