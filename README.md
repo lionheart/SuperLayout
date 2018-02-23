@@ -1,5 +1,5 @@
-SuperLayout
-===========
+![](meta/repo-banner.png)
+[![](meta/repo-banner-bottom.png)][lionheart-url]
 
 [![CI Status](http://img.shields.io/travis/lionheart/SuperLayout.svg?style=flat)](https://travis-ci.org/lionheart/SuperLayout)
 [![Version](https://img.shields.io/cocoapods/v/SuperLayout.svg?style=flat)](http://cocoapods.org/pods/SuperLayout)
@@ -215,3 +215,5 @@ To use this library, you should have a basic understanding of the [`NSLayoutAnch
 ## License
 
 SuperLayout is available under the Apache 2.0 license. See [LICENSE](LICENSE) for more info.
+
+[lionheart-url]: https://lionheartsw.com/
