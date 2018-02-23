@@ -8,8 +8,7 @@
 
 SuperLayout is a library that adds a few custom operators to Swift that makes using the amazing NSLayoutAnchor API for Auto Layout a breeze. SuperLayout doesn't override already-defined methods in `Equatable` (such as `==` and `>=`), and defines ones that are logical and easily understandable to anyone who might be inheriting your codebase or joining your team.
 
-What It Does
-------------
+## What It Does
 
 In short, SuperLayout turns this:
 
@@ -19,19 +18,17 @@ Into this:
 
 <img src='https://github.com/lionheart/SuperLayout/raw/master/new1.png' width='355px' />
 
-How it works
-------------
+## How it works
 
 SuperLayout defines three custom operators: `~~`, `≥≥`, and `≤≤` that correspond to `equalTo`, `≥` to `greaterThanOrEqualTo`, and `≤` to `lessThanOrEqualTo`, respectively.
 
 The greater than and less than operators were chosen with practicality in mind; `≥` and `≤` have simple keyboard shortcuts (just `Option` + `<` and `Option` + `>` in macOS), so there's no need to copy-paste characters when writing constraints.
 
-Installation
-------------
+## Installation
 
 SuperLayout is available via CocoaPods and SwiftPM. If you're using CocoaPods, just specify this in your Podfile:
 
-    pod 'SuperLayout', '~> 0.2'
+    pod 'SuperLayout'
 
 ### Before You Use
 
