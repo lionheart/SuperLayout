@@ -1,3 +1,5 @@
+# vim: ft=ruby
+
 Pod::Spec.new do |s|
   s.name             = "SuperLayout"
   s.version          =  "1.0.0"
