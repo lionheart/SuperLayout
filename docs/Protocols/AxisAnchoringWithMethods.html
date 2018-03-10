@@ -8,6 +8,9 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     <style type='text/css'>body { font-family: -apple-system !important; }</style>
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -20,7 +23,13 @@
         <a class="header-link" href="../index.html">
           SuperLayout Docs
         </a>
-         (12% documented)
+         (13% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
@@ -73,7 +82,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Structs.html">Structs</a>
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/LayoutContainer.html">LayoutContainer</a>
@@ -87,6 +96,12 @@
         <section class="section">
           <div class="section-content">
             <h1>AxisAnchoringWithMethods</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AxisAnchoringWithMethods</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AxisAnchoring.html">AxisAnchoring</a></span></code></pre>
+
+                </div>
+              </div>
             <p>Undocumented</p>
 
           </div>
@@ -112,8 +127,16 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">constraint</span><span class="p">(</span><span class="nv">equalTo</span><span class="p">:</span> <span class="kt">AnchorType</span><span class="p">,</span> <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.1/Sources/SuperLayout.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -134,8 +157,16 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">constraint</span><span class="p">(</span><span class="nv">lessThanOrEqualTo</span><span class="p">:</span> <span class="kt">AnchorType</span><span class="p">,</span> <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.1/Sources/SuperLayout.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -156,8 +187,16 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">constraint</span><span class="p">(</span><span class="nv">greaterThanOrEqualTo</span><span class="p">:</span> <span class="kt">AnchorType</span><span class="p">,</span> <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.1/Sources/SuperLayout.swift#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -184,30 +223,52 @@
                       <div class="abstract">
                         <p>Returns a constraint that defines one item’s attribute as equal to another item’s attribute plus an optional constant offset.</p>
 
-<p><li>Parameters:</p>
-
-<p><ul>
-<li>lhs: A layout anchor from a <code>UIView</code>, <code>NSView</code>, or <code>UILayoutGuide</code> object. You must use a subclass of NSLayoutAnchor that matches the current anchor. For example, if you call this method on an <code>NSLayoutXAxisAnchor</code> object, this parameter must be another <code>NSLayoutXAxisAnchor</code>.</li>
-<li>rhs: See <code>lhs</code>.</li>
-</ul></li>
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    An <code>NSLayoutConstraint</code> object that defines an equal relationship between the attributes represented by the two layout anchors plus a constant offset.</p>
-
-<p></div></p>
-
-                        <a href="../Protocols/AxisAnchoringWithMethods/~~(_:_:).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">~~&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AxisAnchoring.html">AxisAnchoring</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">Self</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span> <span class="k">where</span> <span class="kt">T</span><span class="o">.</span><span class="kt">AnchorType</span> <span class="o">==</span> <span class="kt">AnchorType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">~~&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AxisAnchoring.html">AxisAnchoring</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">Self</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span> <span class="k">where</span> <span class="kt">T</span><span class="o">.</span><span class="kt">AnchorType</span> <span class="o">==</span> <span class="kt">AnchorType</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A layout anchor from a <code>UIView</code>, <code>NSView</code>, or <code>UILayoutGuide</code> object. You must use a subclass of NSLayoutAnchor that matches the current anchor. For example, if you call this method on an <code>NSLayoutXAxisAnchor</code> object, this parameter must be another <code>NSLayoutXAxisAnchor</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>See <code>lhs</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code>NSLayoutConstraint</code> object that defines an equal relationship between the attributes represented by the two layout anchors plus a constant offset.</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L195-L199">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.1/Sources/SuperLayout.swift#L195-L199">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -230,30 +291,52 @@
                       <div class="abstract">
                         <p>Returns a constraint that defines one item’s attribute as less than or equal to another item’s attribute plus an optional constant offset.</p>
 
-<p><li>Parameters:</p>
-
-<p><ul>
-<li>lhs: A layout anchor from a <code>UIView</code>, <code>NSView</code>, or <code>UILayoutGuide</code> object. You must use a subclass of NSLayoutAnchor that matches the current anchor. For example, if you call this method on an <code>NSLayoutXAxisAnchor</code> object, this parameter must be another <code>NSLayoutXAxisAnchor</code>.</li>
-<li>rhs: See <code>lhs</code>.</li>
-</ul></li>
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    An <code>NSLayoutConstraint</code> object that defines the attribute represented by this layout anchor as less than or equal to the attribute represented by the anchor parameter plus a constant offset.</p>
-
-<p></div></p>
-
-                        <a href="../Protocols/AxisAnchoringWithMethods/≤≤(_:_:).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="err">≤≤</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AxisAnchoring.html">AxisAnchoring</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">Self</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span> <span class="k">where</span> <span class="kt">T</span><span class="o">.</span><span class="kt">AnchorType</span> <span class="o">==</span> <span class="kt">AnchorType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="err">≤≤</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AxisAnchoring.html">AxisAnchoring</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">Self</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span> <span class="k">where</span> <span class="kt">T</span><span class="o">.</span><span class="kt">AnchorType</span> <span class="o">==</span> <span class="kt">AnchorType</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A layout anchor from a <code>UIView</code>, <code>NSView</code>, or <code>UILayoutGuide</code> object. You must use a subclass of NSLayoutAnchor that matches the current anchor. For example, if you call this method on an <code>NSLayoutXAxisAnchor</code> object, this parameter must be another <code>NSLayoutXAxisAnchor</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>See <code>lhs</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code>NSLayoutConstraint</code> object that defines the attribute represented by this layout anchor as less than or equal to the attribute represented by the anchor parameter plus a constant offset.</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L208-L212">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.1/Sources/SuperLayout.swift#L208-L212">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -276,30 +359,52 @@
                       <div class="abstract">
                         <p>Returns a constraint that defines one item’s attribute as greater than or equal to another item’s attribute plus a constant offset.</p>
 
-<p><li>Parameters:</p>
-
-<p><ul>
-<li>lhs: A layout anchor from a <code>UIView</code>, <code>NSView</code>, or <code>UILayoutGuide</code> object. You must use a subclass of NSLayoutAnchor that matches the current anchor. For example, if you call this method on an <code>NSLayoutXAxisAnchor</code> object, this parameter must be another <code>NSLayoutXAxisAnchor</code>.</li>
-<li>rhs: See <code>lhs</code>.</li>
-</ul></li>
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    An <code>NSLayoutConstraint</code> object that defines the attribute represented by this layout anchor as greater than or equal to the attribute represented by the anchor parameter plus a constant offset.</p>
-
-<p></div></p>
-
-                        <a href="../Protocols/AxisAnchoringWithMethods/≥≥(_:_:).html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="err">≥≥</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AxisAnchoring.html">AxisAnchoring</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">Self</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span> <span class="k">where</span> <span class="kt">T</span><span class="o">.</span><span class="kt">AnchorType</span> <span class="o">==</span> <span class="kt">AnchorType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="err">≥≥</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AxisAnchoring.html">AxisAnchoring</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">Self</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span> <span class="k">where</span> <span class="kt">T</span><span class="o">.</span><span class="kt">AnchorType</span> <span class="o">==</span> <span class="kt">AnchorType</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A layout anchor from a <code>UIView</code>, <code>NSView</code>, or <code>UILayoutGuide</code> object. You must use a subclass of NSLayoutAnchor that matches the current anchor. For example, if you call this method on an <code>NSLayoutXAxisAnchor</code> object, this parameter must be another <code>NSLayoutXAxisAnchor</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>See <code>lhs</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code>NSLayoutConstraint</code> object that defines the attribute represented by this layout anchor as greater than or equal to the attribute represented by the anchor parameter plus a constant offset.</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L221-L225">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.1/Sources/SuperLayout.swift#L221-L225">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -312,8 +417,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 Lionheart Software LLC</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017-2018 Lionheart Software LLC</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

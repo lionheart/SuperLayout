@@ -8,6 +8,9 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     <style type='text/css'>body { font-family: -apple-system !important; }</style>
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -19,7 +22,13 @@
         <a class="header-link" href="index.html">
           SuperLayout Docs
         </a>
-         (12% documented)
+         (13% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
@@ -72,7 +81,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Structs.html">Structs</a>
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/LayoutContainer.html">LayoutContainer</a>
@@ -112,8 +121,16 @@
 
                         <a href="Protocols/AxisAnchoring.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AxisAnchoring</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L28-L33">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.1/Sources/SuperLayout.swift#L28-L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -135,8 +152,16 @@
 
                         <a href="Protocols/DimensionAnchoring.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DimensionAnchoring</span><span class="p">:</span> <span class="kt"><a href="Protocols/AxisAnchoring.html">AxisAnchoring</a></span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L35-L37">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.1/Sources/SuperLayout.swift#L35-L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -169,8 +194,16 @@
 
                         <a href="Protocols/AxisAnchoringWithMethods.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AxisAnchoringWithMethods</span><span class="p">:</span> <span class="kt"><a href="Protocols/AxisAnchoring.html">AxisAnchoring</a></span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L59-L63">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.1/Sources/SuperLayout.swift#L59-L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -192,8 +225,16 @@
 
                         <a href="Protocols/DimensionAnchoringWithMethods.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DimensionAnchoringWithMethods</span><span class="p">:</span> <span class="kt"><a href="Protocols/DimensionAnchoring.html">DimensionAnchoring</a></span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.0/Sources/SuperLayout.swift#L65-L73">Show on GitHub</a>
+                        <a href="https://github.com/lionheart/SuperLayout/tree/1.0.1/Sources/SuperLayout.swift#L65-L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -206,8 +247,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 Lionheart Software LLC</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017-2018 Lionheart Software LLC</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
