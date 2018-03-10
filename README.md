@@ -1,15 +1,14 @@
-SuperLayout
-===========
+![](meta/repo-banner.png)
+[![](meta/repo-banner-bottom.png)][lionheart-url]
 
 [![CI Status](http://img.shields.io/travis/lionheart/SuperLayout.svg?style=flat)](https://travis-ci.org/lionheart/SuperLayout)
 [![Version](https://img.shields.io/cocoapods/v/SuperLayout.svg?style=flat)](http://cocoapods.org/pods/SuperLayout)
 [![License](https://img.shields.io/cocoapods/l/SuperLayout.svg?style=flat)](http://cocoapods.org/pods/SuperLayout)
 [![Platform](https://img.shields.io/cocoapods/p/SuperLayout.svg?style=flat)](http://cocoapods.org/pods/SuperLayout)
 
-SuperLayout is a library that adds a few custom operators to Swift that makes using the amazing (and…perhaps verbose 😜) NSLayoutAnchor API introduced in iOS 9 a breeze. Unlike other libraries, it doesn't override already-defined methods in `Equatable` (such as `==` and `>=`), and defines ones that are logical and easily understandable to anyone who might be inheriting your codebase or joining your team.
+SuperLayout is a library that adds a few custom operators to Swift that makes using the amazing NSLayoutAnchor API for Auto Layout a breeze. SuperLayout doesn't override already-defined methods in `Equatable` (such as `==` and `>=`), and defines ones that are logical and easily understandable to anyone who might be inheriting your codebase or joining your team.
 
-What It Does
-------------
+## What It Does
 
 In short, SuperLayout turns this:
 
@@ -19,19 +18,17 @@ Into this:
 
 <img src='https://github.com/lionheart/SuperLayout/raw/master/new1.png' width='355px' />
 
-How it works
-------------
+## How it works
 
 SuperLayout defines three custom operators: `~~`, `≥≥`, and `≤≤` that correspond to `equalTo`, `≥` to `greaterThanOrEqualTo`, and `≤` to `lessThanOrEqualTo`, respectively.
 
 The greater than and less than operators were chosen with practicality in mind; `≥` and `≤` have simple keyboard shortcuts (just `Option` + `<` and `Option` + `>` in macOS), so there's no need to copy-paste characters when writing constraints.
 
-Installation
-------------
+## Installation
 
 SuperLayout is available via CocoaPods and SwiftPM. If you're using CocoaPods, just specify this in your Podfile:
 
-    pod 'SuperLayout', '~> 0.2'
+    pod 'SuperLayout'
 
 ### Before You Use
 
@@ -215,3 +212,6 @@ To use this library, you should have a basic understanding of the [`NSLayoutAnch
 ## License
 
 SuperLayout is available under the Apache 2.0 license. See [LICENSE](LICENSE) for more info.
+
+[lionheart-url]: https://lionheartsw.com/
+
