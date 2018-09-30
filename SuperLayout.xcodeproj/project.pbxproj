@@ -27,7 +27,7 @@
 		37CA7E2E1E370C9300402983 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		OBJ_12 /* SuperLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLayoutTests.swift; sourceTree = "<group>"; };
 		OBJ_14 /* SuperLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_15 /* SuperLayoutTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SuperLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_15 /* SuperLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = SuperLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* SuperLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +150,14 @@
 				CLASSPREFIX = LHS;
 				LastUpgradeCheck = 9999;
 				ORGANIZATIONNAME = "Lionheart Software LLC";
+				TargetAttributes = {
+					OBJ_16 = {
+						LastSwiftMigration = 1000;
+					};
+					OBJ_23 = {
+						LastSwiftMigration = 1000;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "SuperLayout" */;
 			compatibilityVersion = "Xcode 8.0";
@@ -213,6 +221,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SuperLayout;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = SuperLayout;
 			};
 			name = Debug;
@@ -233,6 +243,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SuperLayout;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = SuperLayout;
 			};
 			name = Release;
@@ -250,6 +262,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = SuperLayoutTests;
 			};
 			name = Debug;
@@ -267,6 +281,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = SuperLayoutTests;
 			};
 			name = Release;
