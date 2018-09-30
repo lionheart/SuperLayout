@@ -37,6 +37,13 @@
     },
     {
       "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
+      "line": 29,
+      "symbol": "AxisAnchoring.AnchorType",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
       "line": 31,
       "symbol": "AxisAnchoring.constant",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -170,6 +177,13 @@
     },
     {
       "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
+      "line": 78,
+      "symbol": "LayoutContainer.AnchorType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
       "line": 80,
       "symbol": "LayoutContainer.multiplier",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -191,6 +205,13 @@
     },
     {
       "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
+      "line": 104,
+      "symbol": "NSLayoutYAxisAnchor.AnchorType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
       "line": 106,
       "symbol": "NSLayoutYAxisAnchor.constant",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -205,6 +226,13 @@
     },
     {
       "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
+      "line": 111,
+      "symbol": "NSLayoutXAxisAnchor.AnchorType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
       "line": 113,
       "symbol": "NSLayoutXAxisAnchor.constant",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -215,6 +243,13 @@
       "line": 114,
       "symbol": "NSLayoutXAxisAnchor.anchor",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dan/Projects/SuperLayout/Sources/SuperLayout.swift",
+      "line": 118,
+      "symbol": "NSLayoutDimension.AnchorType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
