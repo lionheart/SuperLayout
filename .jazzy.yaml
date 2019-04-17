@@ -1,7 +1,7 @@
 author: "Lionheart Software"
 author_url: "https://lionheartsw.com"
 github_url: "https://github.com/lionheart/SuperLayout"
-github_file_prefix: "https://github.com/lionheart/SuperLayout/tree/2.0.0"
+github_file_prefix: "https://github.com/lionheart/SuperLayout/tree/3.0.0"
 xcodebuild_arguments: ["-project", "SuperLayout.xcodeproj", "-scheme", "SuperLayout"]
 readme: "README.md"
 copyright: "&copy; 2017-2018 Lionheart Software LLC"
