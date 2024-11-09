@@ -4,15 +4,16 @@ import XCTest
 class SuperLayoutTests: XCTestCase {
     var viewA: UIView!
     var viewB: UIView!
+    var container: UIView!
 
     override func setUp() {
-        let viewA = UIView()
+        viewA = UIView()
         viewA.translatesAutoresizingMaskIntoConstraints = false
 
-        let viewB = UIView()
+        viewB = UIView()
         viewB.translatesAutoresizingMaskIntoConstraints = false
 
-        let container = UIView()
+        container = UIView()
         container.addSubview(viewA)
         container.addSubview(viewB)
     }
@@ -29,7 +30,7 @@ class SuperLayoutTests: XCTestCase {
 
     func testConstraint3() {
         let constraint = viewA.widthAnchor ~~ viewB.widthAnchor * 1.2
-        XCTAssert(constraint.multiplier == 1.2)
+        XCTAssertEqual(constraint.multiplier, 1.2, accuracy: 0.1)
     }
 
     static var allTests : [(String, (SuperLayoutTests) -> () throws -> Void)] {
