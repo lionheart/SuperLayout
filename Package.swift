@@ -1,30 +1,25 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.10
 import PackageDescription
 
 let package = Package(
     name: "SuperLayout",
     platforms: [
-        .iOS(.v9)
+        .iOS(.v15)
     ],
     products: [
         .library(
             name: "SuperLayout",
-            targets: ["SuperLayoutCore"]
+            targets: ["SuperLayout"]
         ),
     ],
-    dependencies: [],
     targets: [
         .target(
-            name: "SuperLayoutCore",
-            path: "Sources",
-            sources: ["*"],
-            swiftSettings: [
-                .define("SWIFT_VERSION", to: "5.0")
-            ]
+            name: "SuperLayout",
+            path: "Sources"
         ),
         .testTarget(
             name: "SuperLayoutTests",
-            dependencies: ["SuperLayoutCore"]
+            dependencies: ["SuperLayout"]
         ),
     ]
 )
