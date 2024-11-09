@@ -24,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37A62C3F2CDF990B001F0261 /* SuperLayout.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SuperLayout.podspec; sourceTree = "<group>"; };
 		37CA7E2E1E370C9300402983 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		OBJ_12 /* SuperLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLayoutTests.swift; sourceTree = "<group>"; };
 		OBJ_14 /* SuperLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SuperLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
+				37A62C3F2CDF990B001F0261 /* SuperLayout.podspec */,
 				OBJ_7 /* Sources */,
 				OBJ_10 /* Tests */,
 				OBJ_13 /* Products */,
@@ -164,6 +166,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = OBJ_5;
